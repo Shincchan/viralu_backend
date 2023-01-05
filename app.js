@@ -1,5 +1,5 @@
 const express =require('express');
-const cors = require('cors');
+// const cors = require('cors');
 const app = express();
 const PORT = process.env.PORT || 8000
 const mongoose = require('mongoose');
@@ -16,7 +16,7 @@ mongoose.connection.on('connected',()=>{
 mongoose.connection.on('error',(err)=>{
     console.log('error in database',err);
 })
-app.use(cors);
+// app.use(cors);
 //requiring schema
 require('./models/user');
 require('./models/post');
